@@ -24,7 +24,7 @@ $configPdv = $configPdv->configPdv(Session::get('idEmpresa'));
     <?php if (getenv('APPLICATION_NAME')): ?>
         <title><?php echo getenv('APPLICATION_NAME'); ?></title>
     <?php else: ?>
-        <title>ZigMoney</title>
+        <title>Cefálicos ZigMoney</title>
     <?php endif; ?>
 
 
@@ -128,17 +128,17 @@ $configPdv = $configPdv->configPdv(Session::get('idEmpresa'));
     <div class="sidebar" data-color="black" data-active-color="danger">
 
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+            <a href="#" class="simple-text logo-mini">
                 <div class="logo-image-small">
 
                 </div>
             </a>
             <a href="<?php echo BASEURL; ?>/pdvDiferencial" class="simple-text logo-normal">
-          <span style="color:#00cc66;">&nbsp;&nbsp;&nbsp;
+          <span style="color:#fff;">&nbsp;&nbsp;&nbsp;
             <?php if (getenv('APPLICATION_NAME')): ?>
                 <?php echo getenv('APPLICATION_NAME'); ?>
             <?php else: ?>
-                <b style="opacity:0.70">ZigMoney</b>
+                <b style="opacity:0.70">Cefálicos</b>
             <?php endif; ?>
 
           </span>

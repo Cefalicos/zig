@@ -4,8 +4,7 @@
 }
 
 body {
-  background: #007bff;
-  background: linear-gradient(to right, #0062E6, #33AEFF);
+  background: #000;
 }
 
 body, .container, .row {
@@ -178,4 +177,43 @@ body, .container, .row {
   .form-label-group input:-ms-input-placeholder {
     color: #777;
   }
+}
+
+
+.form-links a {
+  color: #000;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #000000ed;
+  border-color: #000000ed;
+}
+
+.form-control:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 .2rem rgb(0 0 0 / 25%);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 .2rem rgb(0 0 0 / 50%);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  box-shadow: 0 0 0 .2rem rgb(0 0 0 / 50%);
 }

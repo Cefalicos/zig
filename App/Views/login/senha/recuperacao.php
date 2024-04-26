@@ -34,6 +34,6 @@ use System\HtmlComponents\FlashMessage\FlashMessage; ?>
 
     <hr class="my-4">
 
-    <center style="font-size:13px;opacity:0.70">ZigMoney <span style="font-size:17px">&hearts;</span></center>
+    <center style="font-size:13px;opacity:0.70">Cefálicos ZigMoney<center>
 
 </form>

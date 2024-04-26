@@ -11,7 +11,7 @@
     <?php if (getenv('APPLICATION_NAME')): ?>
         <title><?php echo getenv('APPLICATION_NAME'); ?></title>
     <?php else: ?>
-        <title>ZigMoney</title>
+        <title>Cefálicos ZigMoney</title>
     <?php endif; ?>
 
     <meta charset="utf-8">
@@ -19,14 +19,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="<?php echo BASEURL; ?>/public/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASEURL; ?>/public/css/login.css">
-    <style type="text/css">
-        body {
-            background-image: url('<?php echo BASEURL; ?>/public/img/fundo_login.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top center;
-        }
-    </style>
 </head>
 <body>
 

@@ -45,14 +45,14 @@ use System\Session\Session;
         <?php endif; ?>
 
 
-        <li class="">
+        <!-- <li class="">
             <a href="<?php echo BASEURL; ?>/cliente"
                class="<?php currentRouteFromMenu('cliente', 'clienteBorder'); ?>
           <?php currentRouteFromMenu('clienteEndereco', 'clienteBorder'); ?>">
                 <i class="fas fa-user-tie"></i>
                 <p>Clientes</p>
             </a>
-        </li>
+        </li> -->
 
 
         <!--<li class="">
@@ -69,7 +69,7 @@ use System\Session\Session;
                    class="<?php currentRouteFromMenu('relatorio', 'relatorioBorder'); ?>
                     <?php currentRouteFromMenu('relatorio/vendasPorPeriodo', 'relatorioBorder'); ?>">
                     <i class="fas fa-file-contract"></i>
-                    <p>Log de Vendas</p>
+                    <p>relatório de Vendas</p>
                 </a>
             </li>
         <?php endif; ?>

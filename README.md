@@ -1,1 +1,1 @@
-# Cefálicos - ZigMoney
+# Cefálicos

@@ -64,7 +64,7 @@ function uploadImageHelper($uploadClass, $folder, $image)
 {
     $uploadClass->file($image);
     $uploadClass->folder($folder);
-    $uploadClass->extensions(array("png", "jpg", "jpeg"));
+    $uploadClass->extensions(array("png", "jpg", "jpeg", "webp"));
 
     $error = null;
     switch ($uploadClass->getErrors()) {

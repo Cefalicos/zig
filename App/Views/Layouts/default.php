@@ -15,16 +15,17 @@ $configPdv = $configPdv->configPdv(Session::get('idEmpresa'));
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-    <?php if (getenv('APPLICATION_NAME')): ?>
-        <link rel="shortcut icon" href="<?php echo BASEURL;?>/public/img/favicon_tonie.png"/>
-    <?php else: ?>
-        <link rel="shortcut icon" href="<?php echo BASEURL;?>/public/img/favicon.png"/>
-    <?php endif; ?>
+
+    <link rel="shortcut icon" href="<?php echo BASEURL;?>/public/img/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo BASEURL;?>/public/img//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo BASEURL;?>/public/img//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo BASEURL;?>/public/img//favicon-16x16.png">
+    <link rel="manifest" href="<?php echo BASEURL;?>/public/img//site.webmanifest">
 
     <?php if (getenv('APPLICATION_NAME')): ?>
         <title><?php echo getenv('APPLICATION_NAME'); ?></title>
     <?php else: ?>
-        <title>Cefálicos ZigMoney</title>
+        <title>Cefálicos</title>
     <?php endif; ?>
 
 
@@ -48,7 +49,7 @@ $configPdv = $configPdv->configPdv(Session::get('idEmpresa'));
     <link rel="stylesheet" type="text/css" href="<?php echo BASEURL; ?>/public/css/w3cform.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASEURL; ?>/public/css/confirm.css">
 
-    <meta name="author" content="ZigMoney">
+    <meta name="author" content="Cefálicos">
     <meta property="og:url" content="https://github.com/valdiney/zig/">
 
     <?php if (getenv('APPLICATION_NAME')): ?>
@@ -56,11 +57,11 @@ $configPdv = $configPdv->configPdv(Session::get('idEmpresa'));
         <meta property="og:title" content="<?php echo getenv('APPLICATION_NAME'); ?>">
         <meta property="og:site_name" content="<?php echo getenv('APPLICATION_NAME'); ?>">
     <?php else: ?>
-        <meta property="og:title" content="ZigMoney">
-        <meta property="og:site_name" content="ZigMoney">
+        <meta property="og:title" content="Cefálicos">
+        <meta property="og:site_name" content="Cefálicos">
     <?php endif; ?>
 
-    <meta property="og:description" content="ZigMoney">
+    <meta property="og:description" content="Cefálicos">
     <meta property="og:image" content="https://raw.githubusercontent.com/valdiney/zig/master/prints/dashboard.png">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800">

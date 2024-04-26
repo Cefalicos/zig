@@ -11,7 +11,7 @@
     <?php if (getenv('APPLICATION_NAME')): ?>
         <title><?php echo getenv('APPLICATION_NAME'); ?></title>
     <?php else: ?>
-        <title>Cefálicos ZigMoney</title>
+        <title>Cefálicos</title>
     <?php endif; ?>
 
     <meta charset="utf-8">

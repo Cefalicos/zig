@@ -1,6 +1,8 @@
 obterProdutosDaMesa();
 obterValorTotalDosProdutosNaMesa();
 
+let debounce;
+
 /*Acrescenta um produto a seleção de venda*/
 function colocarProdutosNaMesa(id, item, seProdutoEsgotado) {
     if (seProdutoEsgotado == 'esgotado') {
@@ -88,33 +90,37 @@ function obterOultimoProdutoColocadoNaMesa() {
 
 /*Acrescenta ou decrementa a quantidade de um produto*/
 function alterarAquantidadeDeUmProdutoNaMesa(id, quantidade, element) {
-    quantidade = Number(quantidade);
+    clearTimeout(debounce);
 
-    if (quantidade <= 0) {
-        element.val(1);
-    }
+    debounce = setTimeout(() => {
+        quantidade = Number(quantidade);
 
-    if (quantidade > 0 && quantidade != '') {
-        modalValidacao('Aplicando', 'Aguarde');
+        if (quantidade <= 0) {
+            element.val(1);
+        }
 
-        var rota = getDomain() + "/pdvDiferencial/alterarAquantidadeDeUmProdutoNaMesa/" + id + "/" + quantidade;
-        $.get(rota, function (data, status) {
-            var obj = JSON.parse(data);
+        if (quantidade > 0 && quantidade != '') {
+            modalValidacao('Aplicando', 'Aguarde');
 
-            if (obj.quantidade_insuficiente == true) {
-                var legendaUnidade = (obj.unidades > 1) ? 'unidades' : 'unidade';
-                modalValidacao('Aplicando', 'Este Produto tem apenas '+obj.unidades+' '+legendaUnidade+' em estoque.');
-                element.val(obj.unidades);
-                return false;
-            }
+            var rota = getDomain() + "/pdvDiferencial/alterarAquantidadeDeUmProdutoNaMesa/" + id + "/" + quantidade;
+            $.get(rota, function (data, status) {
+                var obj = JSON.parse(data);
 
-            $(".tabela-de-produto tbody").empty();
-            obterProdutosDaMesa();
-            obterValorTotalDosProdutosNaMesa();
-            calcularTroco();
-            setTimeout(modalValidacaoClose, 1000);
-        });
-    }
+                if (obj.quantidade_insuficiente == true) {
+                    var legendaUnidade = (obj.unidades > 1) ? 'unidades' : 'unidade';
+                    modalValidacao('Aplicando', 'Este Produto tem apenas '+obj.unidades+' '+legendaUnidade+' em estoque.');
+                    element.val(obj.unidades);
+                    return false;
+                }
+
+                $(".tabela-de-produto tbody").empty();
+                obterProdutosDaMesa();
+                obterValorTotalDosProdutosNaMesa();
+                calcularTroco();
+                setTimeout(modalValidacaoClose, 1000);
+            });
+        }
+    }, 500);
 }
 
 /*Retira um produto da seleção de venda*/

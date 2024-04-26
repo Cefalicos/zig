@@ -5,7 +5,7 @@
     <base href="<?php echo BASEURL; ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="public/img/favicon_tonie.png"/>
-    <title>ZigMoney - <?php echo $nomeEmpresa; ?></title>
+    <title>Cefálicos - <?php echo $nomeEmpresa; ?></title>
     <link rel="shortcut icon" href="public/img/favicon.png"/>
     <style>
         table {

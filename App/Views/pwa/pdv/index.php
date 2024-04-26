@@ -99,7 +99,7 @@
 <nav class="navbar navbar-light" style="background:#2dd1ac;">
 		<span class="navbar-toggler btn-sm btn" style="padding:0;border:0;outline:none">
             <span class="navbar-toggler-icon" id="button-menu"></span>
-            <span style="text-align:center!important;font-size:16px">ZigMoney</span>
+            <span style="text-align:center!important;font-size:16px">Cefálicos</span>
         </span>
 </nav>
 

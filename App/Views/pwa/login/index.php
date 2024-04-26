@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
 <head>
-    <title>ZigMoney</title>
+    <title>Cefálicos</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../assets/images/logo-light-text.png"/>
@@ -66,7 +66,7 @@
             <div class="card" id="card-login">
                 <div class="card-body">
 
-                    <div class="text-center"><h2 style="color:white;">ZigMoney</h2></div>
+                    <div class="text-center"><h2 style="color:white;">Cefálicos</h2></div>
                     <br>
 
                     <div class="form-group">

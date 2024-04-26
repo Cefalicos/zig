@@ -42,7 +42,7 @@ class SenhaController extends Controller
     public function recuperar()
     {
         $data = $this->post->data();
-        $title = !is_null(getenv('APPLICATION_NAME')) ? getenv('APPLICATION_NAME') : "ZigMoney";
+        $title = !is_null(getenv('APPLICATION_NAME')) ? getenv('APPLICATION_NAME') : "Cefálicos";
 
         if (!isset($data->email)) {
             Session::flash('error', 'Digite um email!');

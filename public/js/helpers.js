@@ -210,7 +210,7 @@ function CNPJvalido(cnpj) {
 
 //////////////////////////////////////////////////////////////////////////////
 function verificaExtensaoArquivo(arquivo) {
-    extensoes_permitidas = new Array(".gif", ".png", ".jpeg", ".jpg", ".jfif");
+    extensoes_permitidas = new Array(".gif", ".png", ".jpeg", ".jpg", ".jfif", ".webp");
     extensao = (arquivo.substring(arquivo.lastIndexOf("."))).toLowerCase();
     permite = false;
     $(extensoes_permitidas).each(function(i) {

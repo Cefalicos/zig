@@ -175,7 +175,7 @@ class ProdutoController extends Controller
 
     public function pesquisarProdutoPorNome($nome = false)
     {
-        $nome = utf8_encode(out64($nome));
+        $nome = mb_convert_encoding(out64($nome), "UTF-8");
 
         $produto = new Produto();
         $produtos = $produto->produtos($this->idEmpresa, $nome);
@@ -185,7 +185,7 @@ class ProdutoController extends Controller
 
     public function pesquisarProdutoPorCodigoDeBarras(string $codigo = null)
     {
-        $codigo = $codigo? utf8_encode(out64($codigo)): null;
+        $codigo = $codigo? mb_convert_encoding(out64($codigo), "UTF-8"): null;
 
         $produto = new Produto();
         $produtos = $produto->getBy($this->idEmpresa, 'codigo', $codigo);

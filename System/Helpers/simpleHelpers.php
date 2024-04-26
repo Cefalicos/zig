@@ -118,7 +118,7 @@ Formata o valor para Real antes de apresentar na View
 */
 function real($valor)
 {
-    return number_format($valor, 2, ',', '.');
+    return number_format(floatval($valor), 2, ',', '.');
 }
 
 /*

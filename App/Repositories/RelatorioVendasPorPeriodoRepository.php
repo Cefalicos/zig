@@ -135,7 +135,7 @@ class RelatorioVendasPorPeriodoRepository
         return $query;
     }
 
-    public function itensDaVenda($idEmpresa = false, $codigoVenda)
+    public function itensDaVenda($idEmpresa = false, $codigoVenda = null)
     {
         $query = $this->venda->query(
             "SELECT produtos.imagem AS produtoImagem, produtos.nome AS produtoNome,
@@ -170,7 +170,7 @@ class RelatorioVendasPorPeriodoRepository
             AND codigo_venda = '{$codigoVenda}'")[0];
     }
 
-    public function gerarRelatioDeVendasPorPeriodoPDF(array $periodo, $idUsuario = false, $idEmpresa = false, $empresa)
+    public function gerarRelatioDeVendasPorPeriodoPDF(array $periodo, $idUsuario = false, $idEmpresa = false, $empresa = null)
     {
         $periodo = ['de' => $periodo['de'], 'ate' => $periodo['ate']];
         $vendas = $this->vendasPorPeriodo($periodo, $idUsuario, $idEmpresa);

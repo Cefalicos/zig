@@ -9,6 +9,8 @@ use System\Utils\Barcode\Exceptions\BarcodeSemCodigoException;
 
 class BarcodePicqerAdapter extends BarcodeAdapter implements HasSvg
 {
+    private $code;
+
     public function prepare(string $code): void
     {
         $this->code = $code;

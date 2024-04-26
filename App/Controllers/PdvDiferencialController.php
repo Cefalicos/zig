@@ -167,7 +167,7 @@ class PdvDiferencialController extends Controller
 
     public function pesquisarProdutoPorNome($nome = false)
     {
-        $nome = utf8_encode(out64($nome));
+        $nome = mb_convert_encoding(out64($nome), "UTF-8");
 
         $produto = new Produto();
         $produtos = $produto->produtosNoPdv($this->idEmpresa, $nome);
@@ -177,7 +177,7 @@ class PdvDiferencialController extends Controller
 
     public function pesquisarProdutoPorCodeDeBarra($codigo = false)
     {
-        $codigo = utf8_encode(out64($codigo));
+        $codigo = mb_convert_encoding(out64($codigo), "UTF-8");
 
         $produto = new Produto();
         $produtos = $produto->produtosNoPdvFiltrarPorCodigoDeBarra($this->idEmpresa, $codigo);

@@ -10,6 +10,7 @@ use System\Session\Session;
 class LogAcessoController extends Controller
 {
     protected $layout;
+    protected $idEmpresa, $idUsuario;
 
     public function __construct()
     {

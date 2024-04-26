@@ -21,7 +21,7 @@ if (!file_exists(__DIR__. '/.env')) {
 }
 
 # Load env configuration
-$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__);
 $dotenv->load();
 
 header('Access-Control-Allow-Origin: *');
@@ -31,7 +31,7 @@ System\Session\Session::start();
 
 System\Session\Token::verify();
 
-date_default_timezone_set(getenv('TIMEZONE', 'America/Bahia'));
+date_default_timezone_set(getenv('TIMEZONE', 'America/Sao_Paulo'));
 
 use System\Route\GetRoute;
 use System\Route\SelectController;

@@ -127,6 +127,7 @@ Exemplo: Tranforma o valor ( 2.440,80 ) em ( 2440.80 )
 */
 function formataValorMoedaParaGravacao($valor)
 {
+    $valor = (string) $valor;
     $verificaPonto = ".";
     if (strpos("[" . $valor . "]", "$verificaPonto")) {
         $valor = str_replace('.', '', $valor);
